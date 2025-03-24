@@ -1,26 +1,519 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>grazia-landscape</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keto Probiotix - L'Arte del Benessere Italiano</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="magazine-container">
+      <div class="header-content">
+        <!-- Mobile menu button -->
+        <button class="menu-button" id="menuButton" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        
+        <!-- Logo/Brand -->
+        <div class="logo">
+          <h1>GRAZIA</h1>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="#">Moda</a>
+          <a href="#">Bellezza</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Cultura</a>
+          <a href="#">Celebrity</a>
+        </nav>
+        
+        <!-- Search icon -->
+        <div class="search-button">
+          <button aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Date display -->
+      <div class="date-display">
+        <p id="currentDate"></p>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-content">
+        <a href="#">Moda</a>
+        <a href="#">Bellezza</a>
+        <a href="#">Lifestyle</a>
+        <a href="#">Cultura</a>
+        <a href="#">Celebrity</a>
+        <p class="mobile-date" id="mobileDateDisplay"></p>
+      </div>
+    </div>
+  </header>
 
-    <meta property="og:title" content="Lovable Generated Project" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="magazine-container">
+        <div class="hero-grid">
+          <!-- Main Image Section -->
+          <div class="hero-image reveal-container">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="L'Arte del Benessere Italiano" loading="lazy">
+          </div>
+          
+          <!-- Content Section -->
+          <div class="hero-content">
+            <div class="category-tag">
+              <span>Salute</span>
+            </div>
+            
+            <h2>L'Arte del Benessere Italiano</h2>
+            
+            <p class="hero-subtitle">
+              Scopri come Keto Probiotix sta rivoluzionando il mondo del wellness
+            </p>
+            
+            <div class="action-button">
+              <a href="#order-form" class="button-hover">Scopri di più</a>
+            </div>
+          </div>
+          
+          <!-- Horizontal Photo Collage with Yellow Background -->
+          <div class="photo-collage">
+            <div class="collage-grid">
+              <div class="collage-item">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Model 1" loading="lazy">
+              </div>
+              <div class="collage-item">
+                <img src="https://images.unsplash.com/photo-1564485377539-4af72d1f6a2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Model 2" loading="lazy">
+              </div>
+              <div class="collage-item">
+                <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Model 3" loading="lazy">
+              </div>
+              <div class="collage-item">
+                <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Model 4" loading="lazy">
+              </div>
+              <div class="collage-item">
+                <img src="https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Model 5" loading="lazy">
+              </div>
+              <div class="collage-item">
+                <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Model 6" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Product Info Section -->
+    <section class="product-info">
+      <div class="magazine-container">
+        <div class="section-header">
+          <span class="category-tag">Esclusivo</span>
+          <h2>Keto Probiotix</h2>
+          <p class="section-subtitle">
+            La rivoluzione italiana nel mondo del benessere e della forma fisica. Una formula unica che combina i benefici della chetosi con potenti probiotici.
+          </p>
+        </div>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <div class="product-grid">
+          <div class="product-image reveal-container">
+            <img src="https://images.unsplash.com/photo-1584362917137-56406a73241c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Keto Probiotix product" loading="lazy">
+          </div>
+
+          <div class="product-content">
+            <div class="product-description">
+              <h3>La Scienza Dietro Keto Probiotix</h3>
+              <p>
+                Keto Probiotix è il risultato di anni di ricerca scientifica italiana, combinando gli effetti benefici della dieta chetogenica con probiotici avanzati per ottimizzare la salute intestinale e supportare la perdita di peso in modo naturale.
+              </p>
+            </div>
+
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <h4>Supporta la Digestione</h4>
+                <p>I probiotici naturali aiutano a migliorare la digestione e a ridurre il gonfiore addominale.</p>
+              </div>
+              <div class="benefit-item">
+                <h4>Potenzia il Metabolismo</h4>
+                <p>Formula avanzata che stimola il metabolismo per facilitare la perdita di peso.</p>
+              </div>
+              <div class="benefit-item">
+                <h4>Incrementa l'Energia</h4>
+                <p>Aumenta i livelli di energia e migliora la vitalità quotidiana.</p>
+              </div>
+              <div class="benefit-item">
+                <h4>Migliora l'Equilibrio Intestinale</h4>
+                <p>Ripristina la flora batterica intestinale per un benessere ottimale.</p>
+              </div>
+            </div>
+
+            <div class="action-button">
+              <a href="#order-form" class="button-hover">Scopri i Benefici</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+      <div class="magazine-container">
+        <div class="section-header">
+          <span class="category-tag">Esperienza Personale</span>
+          <h2>La Mia Trasformazione</h2>
+          <p class="section-subtitle">
+            Una storia vera di come Keto Probiotix ha cambiato la mia vita
+          </p>
+        </div>
+
+        <div class="story-blocks">
+          <!-- Story Block 1 -->
+          <div class="story-block">
+            <div class="story-image reveal-container">
+              <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Story illustration 1" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="story-content">
+              <span class="story-part">Parte 1</span>
+              <h3>La mia storia con Keto Probiotix</h3>
+              <div class="separator"></div>
+              <p>
+                Voglio condividere una storia che è quasi finita male per me. Ciao a tutti. Non ne ho mai parlato. E non mi piace lamentarmi. Ma mi è successo quello di cui avevo tanta paura: la mia vita si è quasi trasformata in un inferno in un istante. Fin dall'infanzia amo i pasticcini. Crescendo ho iniziato a cucinarli tutti i giorni a casa. Cupcakes, muffin, crostate, torte: non è stato difficile per me alzarmi presto la mattina per cuocere qualcosa di delizioso prima del lavoro.
+              </p>
+            </div>
+          </div>
+
+          <!-- Story Block 2 -->
+          <div class="story-block reverse">
+            <div class="story-image reveal-container">
+              <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Story illustration 2" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="story-content">
+              <span class="story-part">Parte 2</span>
+              <h3>La mia routine quotidiana</h3>
+              <div class="separator"></div>
+              <p>
+                Prima della pandemia lavoravo in ufficio come designer e poi siamo stati trasferiti in una località remota. Ora il mio posto di lavoro era a casa e cucinare era ancora più facile. Potrei mettere il cupcake nel forno tra un compito e l'altro. Mi piaceva soprattutto quando nel frigorifero era rimasta la pasta sfoglia e ho già cotto la pasta sfoglia con la marmellata per il mio caffè mattutino. Come capisci, ho mangiato molti cibi ricchi di carboidrati, ma non mi muovevo molto a causa del lavoro. Non mi piace andare in palestra e la più vicina è piuttosto lontana da casa mia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Story Block 3 -->
+          <div class="story-block">
+            <div class="story-image reveal-container">
+              <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Story illustration 3" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="story-content">
+              <span class="story-part">Parte 3</span>
+              <h3>Un momento ha cambiato la mia vita</h3>
+              <div class="separator"></div>
+              <p>
+                Stavo tornando a casa dopo una passeggiata con le amiche. Sulle strisce pedonali mi faceva molto male lo stomaco. Ero stravolta dal dolore, nel vero senso della parola. A causa di ciò, mi sono fermata bruscamente e per poco non sono stata investita da un'auto. Più precisamente, se avessi fatto almeno un passo, allora sarebbe andata a sbattere contro di me. Ero molto spaventata, mi tremavano le gambe e le braccia, dentro tutto si contraeva e continuava a farmi male. Ho vomitato per strada e sono svenuta.
+              </p>
+            </div>
+          </div>
+
+          <!-- Story Block 4 -->
+          <div class="story-block reverse">
+            <div class="story-image reveal-container">
+              <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Story illustration 4" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="story-content">
+              <span class="story-part">Parte 4</span>
+              <h3>Ho raggiunto il limite</h3>
+              <div class="separator"></div>
+              <p>
+                È successo tutto il giorno in cui è iniziata la mia vacanza. Sei mesi fa, abbiamo concordato con le amiche che avremmo trascorso una vacanza insieme: saremmo andati al fiume o al lago con le tende. Ma la mattina non riuscivo ad alzarmi dal letto. Il mio stomaco faceva molto male e non avevo la forza. L'ambulanza mi ha portato. Ho trascorso tre ore in ospedale per un esame. Ho fatto una risonanza magnetica, una TAC, un sacco di test. Per tutto questo tempo sono stato trasportato su una barella speciale dell'ospedale, perché mi era difficile persino sedermi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Story Block 5 -->
+          <div class="story-block">
+            <div class="story-image reveal-container">
+              <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Story illustration 5" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="story-content">
+              <span class="story-part">Parte 5</span>
+              <h3>La soluzione: Keto Probiotix</h3>
+              <div class="separator"></div>
+              <p>
+                Il medico mi ha indicato il sito ufficiale del produttore, dove posso ordinare Keto Probiotix. Sono stata fortunata, perché sono arrivata all'azione -50%! Anche la consegna mi ha fatto piacere: il giorno dopo il corriere aveva già portato la merce. Ho seguito il corso Keto Probiotix e una volta alla settimana controllava le misurazioni e pesava. Non credevo ai miei occhi: i chilogrammi sembravano sciogliersi davanti ai miei occhi, il mio stomaco ha smesso di farmi male e lo svenimento è finito. E questo nonostante non sia morta di fame, ma in palestra ho preso un peso normale. Sono molto felice dell'occasione e dell'aiuto di Keto Probiotix.
+              </p>
+              <a href="#order-form" class="button-hover">Ordina Ora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+      <div class="magazine-container">
+        <div class="section-header">
+          <span class="category-tag">Testimonianze</span>
+          <h2>Cosa Dicono i Nostri Clienti</h2>
+          <p class="section-subtitle">
+            Storie reali di chi ha provato Keto Probiotix
+          </p>
+        </div>
+
+        <div class="testimonials-slider" id="testimonials-slider">
+          <!-- Testimonials will be inserted here by JavaScript -->
+        </div>
+
+        <div class="comments-section">
+          <h3>Commenti</h3>
+          <div class="comments-container" id="comments-container">
+            <!-- Comments will be inserted here by JavaScript -->
+          </div>
+
+          <div class="comment-form">
+            <h4>Lascia un Commento</h4>
+            <form id="commentForm">
+              <div class="form-group">
+                <input type="text" id="commentName" placeholder="Il tuo nome" required>
+              </div>
+              <div class="form-group">
+                <textarea id="commentText" placeholder="Il tuo commento" required></textarea>
+              </div>
+              <div class="form-group rating-group">
+                <span>Valutazione:</span>
+                <div class="star-rating">
+                  <span class="star" data-rating="1">★</span>
+                  <span class="star" data-rating="2">★</span>
+                  <span class="star" data-rating="3">★</span>
+                  <span class="star" data-rating="4">★</span>
+                  <span class="star" data-rating="5">★</span>
+                </div>
+                <input type="hidden" id="ratingValue" value="5">
+              </div>
+              <button type="submit" class="button-hover">Pubblica</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section class="order-form" id="order-form">
+      <div class="magazine-container">
+        <div class="section-header">
+          <span class="category-tag">Offerta Speciale</span>
+          <h2>Ordina Keto Probiotix</h2>
+          <p class="section-subtitle">
+            Approfitta dello sconto del 50% - Offerta a tempo limitato!
+          </p>
+        </div>
+
+        <div class="order-grid">
+          <div class="product-showcase">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1584362917137-56406a73241c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Keto Probiotix product" loading="lazy">
+            </div>
+            <div class="product-price">
+              <div class="price-tag">
+                <span class="old-price">€78,00</span>
+                <span class="new-price">€39,00</span>
+              </div>
+              <div class="discount-badge">
+                <span>-50%</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <ul>
+                <li>✓ Consegna Rapida</li>
+                <li>✓ Pagamento alla Consegna</li>
+                <li>✓ Risultati Garantiti</li>
+                <li>✓ Prodotto in Italia</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="order-form-container">
+            <form id="productOrderForm">
+              <div class="form-group">
+                <label for="fullName">Nome Completo</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Il tuo nome e cognome" required>
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">Numero di Telefono</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Il tuo numero di telefono" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="La tua email" required>
+              </div>
+              <div class="form-group">
+                <label for="address">Indirizzo</label>
+                <input type="text" id="address" name="address" placeholder="Via, numero civico" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">Città</label>
+                  <input type="text" id="city" name="city" placeholder="La tua città" required>
+                </div>
+                <div class="form-group">
+                  <label for="zipCode">CAP</label>
+                  <input type="text" id="zipCode" name="zipCode" placeholder="Codice postale" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="quantity">Quantità</label>
+                <select id="quantity" name="quantity">
+                  <option value="1">1 Confezione - €39,00</option>
+                  <option value="2">2 Confezioni - €75,00 (Risparmia €3)</option>
+                  <option value="3" selected>3 Confezioni - €105,00 (Risparmia €12)</option>
+                </select>
+              </div>
+              <div class="form-group privacy-policy">
+                <label class="checkbox-label">
+                  <input type="checkbox" required>
+                  <span>Ho letto e accetto la <a href="#">Politica sulla Privacy</a></span>
+                </label>
+              </div>
+              <button type="submit" class="order-button button-hover">ORDINA ORA</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="magazine-container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>GRAZIA</h3>
+          <p>
+            La tua fonte di ispirazione per moda, bellezza e lifestyle. Rimani aggiornato sulle ultime tendenze e scopri il meglio della cultura italiana.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Follow us on facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="social-icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </a>
+            <a href="#" aria-label="Follow us on twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="social-icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </a>
+            <a href="#" aria-label="Follow us on instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="social-icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </a>
+            <a href="#" aria-label="Follow us on pinterest">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="social-icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Categorie</h4>
+          <ul>
+            <li><a href="#">Moda</a></li>
+            <li><a href="#">Bellezza</a></li>
+            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Celebrity</a></li>
+            <li><a href="#">Viaggi</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Link Utili</h4>
+          <ul>
+            <li><a href="#">Chi Siamo</a></li>
+            <li><a href="#">Contatti</a></li>
+            <li><a href="#">Pubblicità</a></li>
+            <li><a href="#">Abbonamenti</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Termini e Condizioni</a></li>
+          </ul>
+        </div>
+        
+        <div class="newsletter">
+          <h4>Newsletter</h4>
+          <p>
+            Iscriviti alla nostra newsletter per ricevere aggiornamenti e offerte esclusive.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="La tua email">
+            <button type="submit">Iscriviti</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright" id="copyright"></p>
+        
+        <div class="footer-policy-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Termini di Servizio</a>
+          <a href="#">Preferenze Cookie</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Thank You Popup Modal -->
+  <div class="modal" id="thankYouModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <div class="thank-you-content">
+        <div class="success-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        
+        <span class="category-tag">Ordine Confermato</span>
+        
+        <h2>Grazie, <span id="customerName">Cliente</span>!</h2>
+        
+        <p>
+          Il tuo ordine di <span class="highlight">Keto Probiotix</span> è stato ricevuto con successo.
+          Ti abbiamo inviato una conferma via email con tutti i dettagli dell'ordine.
+        </p>
+        
+        <div class="next-steps">
+          <h3>Cosa Succede Ora?</h3>
+          <ul>
+            <li>✓ Il tuo ordine sarà elaborato entro 24 ore</li>
+            <li>✓ Riceverai un'email con il numero di tracciamento</li>
+            <li>✓ La consegna avverrà entro 3-5 giorni lavorativi</li>
+            <li>✓ Il nostro team di supporto è a tua disposizione per qualsiasi domanda</li>
+          </ul>
+        </div>
+        
+        <button id="backToHomeBtn" class="button-hover">Torna alla Home</button>
+        
+        <p class="support-contact">
+          Hai domande sul tuo ordine? Contattaci all'indirizzo <a href="mailto:supporto@ketoprobiotix.it">supporto@ketoprobiotix.it</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
