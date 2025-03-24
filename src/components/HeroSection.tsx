@@ -77,22 +77,23 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Vertical Photo Collage */}
-          <div className={`lg:col-span-3 hidden lg:grid grid-cols-2 gap-3 h-[600px] ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
-            {modelImages.map((img, index) => (
-              <div 
-                key={index} 
-                className={`overflow-hidden ${index % 2 === 0 ? 'translate-y-6' : ''}`}
-                style={{ height: index === 0 || index === 1 ? '250px' : index === 2 || index === 3 ? '170px' : '180px' }}
-              >
-                <img 
-                  src={img} 
-                  alt={`Model ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          {/* Horizontal Photo Collage with Yellow Background */}
+          <div className={`lg:col-span-3 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+            <div className="bg-magazine-yellow p-3 grid grid-cols-3 gap-2">
+              {modelImages.map((img, index) => (
+                <div 
+                  key={index} 
+                  className="overflow-hidden aspect-[3/4]"
+                >
+                  <img 
+                    src={img} 
+                    alt={`Model ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

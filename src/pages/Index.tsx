@@ -3,9 +3,8 @@ import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import ProductInfo from '../components/ProductInfo';
-import Testimonials from '../components/Testimonials';
+import CombinedFeedback from '../components/CombinedFeedback';
 import OrderForm from '../components/OrderForm';
-import CommentSection from '../components/CommentSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -42,9 +41,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <ProductInfo />
-        <Testimonials />
+        <CombinedFeedback />
         <OrderForm />
-        <CommentSection />
       </main>
       <Footer />
     </div>

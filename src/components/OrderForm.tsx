@@ -7,6 +7,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { useNavigate } from 'react-router-dom';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Il nome deve avere almeno 2 caratteri" }),
@@ -16,6 +17,7 @@ const formSchema = z.object({
 });
 
 const OrderForm: React.FC = () => {
+  const navigate = useNavigate();
   const [time, setTime] = useState({
     hours: 4,
     minutes: 0,
@@ -51,8 +53,8 @@ const OrderForm: React.FC = () => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    toast.success("Ordine inviato con successo! Ti contatteremo presto.");
-    form.reset();
+    // Redirect to thank you page
+    navigate('/thank-you', { state: { customerName: values.name } });
   }
 
   return (
