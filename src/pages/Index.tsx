@@ -2,8 +2,9 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
-import ArticlePreview from '../components/ArticlePreview';
-import ContactForm from '../components/ContactForm';
+import ProductInfo from '../components/ProductInfo';
+import Testimonials from '../components/Testimonials';
+import OrderForm from '../components/OrderForm';
 import CommentSection from '../components/CommentSection';
 import Footer from '../components/Footer';
 
@@ -40,8 +41,9 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <ArticlePreview />
-        <ContactForm />
+        <ProductInfo />
+        <Testimonials />
+        <OrderForm />
         <CommentSection />
       </main>
       <Footer />
