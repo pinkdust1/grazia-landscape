@@ -1,12 +1,50 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import ArticlePreview from '../components/ArticlePreview';
+import ContactForm from '../components/ContactForm';
+import CommentSection from '../components/CommentSection';
+import Footer from '../components/Footer';
 
 const Index = () => {
+  // Simulate page load animation
+  useEffect(() => {
+    // Add a class to the body when component mounts to trigger animations
+    document.body.classList.add('page-loaded');
+    
+    // For smooth reveal animations on scroll
+    const revealContainers = document.querySelectorAll('.reveal-container');
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+    
+    revealContainers.forEach(container => {
+      observer.observe(container);
+    });
+    
+    return () => {
+      document.body.classList.remove('page-loaded');
+      observer.disconnect();
+    };
+  }, []);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <HeroSection />
+        <ArticlePreview />
+        <ContactForm />
+        <CommentSection />
+      </main>
+      <Footer />
     </div>
   );
 };
